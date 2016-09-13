@@ -6,6 +6,9 @@
   <groupId>se.joelabs</groupId>
   <artifactId>scalatest-selenium</artifactId>
   <version>1.0</version>
+  <properties>
+    <cucumber.version>1.2.4</cucumber.version>
+      </properties>
 
   <dependencies>
     <dependency>
@@ -20,24 +23,14 @@
       <version>3.0.0</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>2.35.0</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <scope>test</scope>
-      <version>1.0.11</version>
-    </dependency>
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-jvm</artifactId>
-      <version>1.0.11</version>
-      <type>pom</type>
-    </dependency>
+
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-jvm-deps</artifactId>
@@ -46,14 +39,32 @@
     </dependency>
     <dependency>
       <groupId>info.cukes</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>${cucumber.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-jvm</artifactId>
+      <version>${cucumber.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
       <artifactId>cucumber-scala_2.11</artifactId>
-      <version>1.2.4</version>
+      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>1.2.4</version>
+      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
